@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/site.css">
+		<script src="js/lib/requirejs-2.1.16.js"></script>
+	</head>
+	<body>
+		<script>
+			require(['js/config.js'], function(config) {
+				require(['backbone'], function() {
+                	require(['js/app.js']);
+            	});
+            });
+		</script>
+	</body>
+</html>

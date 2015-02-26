@@ -1,0 +1,14 @@
+<select id="race-select">
+    <option></option>
+    {{#each allRaces}}
+        <option value="{{raceId}}"{{#if_eq raceId compare=../selectedRace.raceId}} selected{{/if_eq}}>{{name}}</option>
+    {{/each}}
+</select>
+
+{{#if selectedRace.subRaces.length}}
+    <select id="subrace-select">
+        {{#each selectedRace.subRaces}}
+            <option value="{{subRaceId}}">{{name}}</option>
+        {{/each}}
+    </select>
+{{/if}}
